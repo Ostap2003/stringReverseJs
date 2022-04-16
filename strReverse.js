@@ -93,10 +93,10 @@ function stringReverse10(str) {
     return rev
 }
 
-let str = 'Hello there';
+let str = 'Hello there!';
 console.log(`${str}, len:${str.length}\n`);
 
-let funcArr = {stringReverse, 
+let funcArr = [stringReverse, 
                stringReverse2, 
                stringReverse3, 
                stringReverse4, 
@@ -105,8 +105,8 @@ let funcArr = {stringReverse,
                stringReverse7, 
                stringReverse8, 
                stringReverse9, 
-               stringReverse10}
+               stringReverse10]
 
-for (let func in funcArr) {
-    console.log(`${func}:\t\t${funcArr[func](str)}`)
+for (let i = 0; i < funcArr.length; i++) {
+    console.log(`function#${i + 1}:\t\t${funcArr[i](str)}`)
 }
